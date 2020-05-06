@@ -40,11 +40,54 @@
                     <connections>
                         <outlet property="tableView" destination="dFL-LP-Atb" id="E5e-ZB-x3j"/>
                         <segue destination="abB-yd-tF4" kind="show" identifier="addItemScreen" id="tqV-Zn-SUV"/>
+                        <segue destination="0oM-Vp-gT1" kind="show" identifier="viewTaskScreen" id="xSX-sy-f6o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="118.52678571428571"/>
+        </scene>
+        <!--View Task View Controller-->
+        <scene sceneID="7BR-nH-lVF">
+            <objects>
+                <viewController id="0oM-Vp-gT1" customClass="ViewTaskViewController" customModule="DoIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dfz-Iv-58K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7J-gd-K6O">
+                                <rect key="frame" x="148.5" y="108" width="117" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxt-LC-YeY">
+                                <rect key="frame" x="142.5" y="198" width="129" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Complete Task"/>
+                                <connections>
+                                    <action selector="completeTask:" destination="0oM-Vp-gT1" eventType="touchUpInside" id="AMw-Mp-vOi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zxt-LC-YeY" firstAttribute="top" secondItem="e7J-gd-K6O" secondAttribute="bottom" constant="30" id="Dad-mc-cTE"/>
+                            <constraint firstItem="e7J-gd-K6O" firstAttribute="centerX" secondItem="Dfz-Iv-58K" secondAttribute="centerX" id="XbF-DJ-gJJ"/>
+                            <constraint firstItem="zxt-LC-YeY" firstAttribute="centerX" secondItem="Dfz-Iv-58K" secondAttribute="centerX" id="Zsd-Ch-f1t"/>
+                            <constraint firstItem="e7J-gd-K6O" firstAttribute="top" secondItem="4Q3-Jg-L0t" secondAttribute="top" constant="20" id="cfq-5n-4Iz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4Q3-Jg-L0t"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MTK-w6-bXE"/>
+                    <connections>
+                        <outlet property="completeTaskButton" destination="zxt-LC-YeY" id="nDZ-LN-ooD"/>
+                        <outlet property="taskNameLabel" destination="e7J-gd-K6O" id="wnl-cm-YoA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BbX-ma-1Fu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1812" y="804"/>
         </scene>
         <!--Create Task View Controller-->
         <scene sceneID="0Wd-uh-jP2">
